@@ -19,7 +19,7 @@ public class ProductController {
     private final List<Product> lista = new ArrayList<Product>();
 
     // Nombre de las variables (Datos) que se envian del Controlador al HTML
-    private final String LISTA_PRODUCTO_KEY = "lista_productos";
+    private final String LISTA_PRODUCTO_KEY = "lista_producto";
     private final String PRODUCTO_KEY = "producto";
 
     /*
@@ -43,7 +43,7 @@ public class ProductController {
         return vista;
     }
 
-    @GetMapping("/detalles?p={ID}")
+    @GetMapping("/producto/{ID}")
     public ModelAndView ver(@PathVariable("ID") int ID) {
         if (ID > lista.size())
             return new ModelAndView("redirect:/"); // Posible ventana de Error (Por defecto vuelve al Inicio)

@@ -10,12 +10,12 @@ public class Product {
     private String descripcion;
     private String precio;
     private String marca;
-    private int stock;
+    private String stock;
     private String URL;
 
     public Product() {}
 
-    public Product(int ID, String nombre, String descripcion, String precio, String marca, int stock, String URL) {
+    public Product(int ID, String nombre, String descripcion, String precio, String marca, String stock, String URL) {
         this.ID = ID;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -65,11 +65,11 @@ public class Product {
         this.marca = marca;
     }
 
-    public int getStock() {
+    public String getStock() {
         return stock;
     }
 
-    public void setStock(int stock) {
+    public void setStock(String stock) {
         this.stock = stock;
     }
 
